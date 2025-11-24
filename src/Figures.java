@@ -24,4 +24,29 @@ public class Figures {
             System.out.println("");
         }
     }
+
+
+    public static void writeInvertedPyramid(int altura) {
+
+        if (altura <= 0) {
+            System.out.println("La altura debe ser mayor que cero.");
+            return;
+        }
+
+
+        for (int i = altura; i > 0; i -= 2) {
+            int spaces = (altura - i) / 2; // Calcula los espacios a la izquierda
+            // Imprime espacios
+            for (int s = 0; s < spaces; s++) {
+                System.out.print(" ");
+            }
+            // Imprime asteriscos
+            for (int j = 0; j < i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+    }
+
 }

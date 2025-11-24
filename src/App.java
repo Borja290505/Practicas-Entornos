@@ -7,7 +7,12 @@ public class App {
         Scanner teclado = new Scanner(System.in);
 
         for (; true; ) {
-            System.out.println("Choose an option:\n" + "  1. Square\n" + "  2. Title\n" + "  3. Cuadrado Personalizado\n" + "  0. Quit\n");
+            System.out.println("Choose an option:\n" +
+                    "  1. Square\n" +
+                    "  2. Title\n" +
+                    "  3. Cuadrado Personalizado\n" +
+                    "  4. Piramide Invertida\n" +
+                    "  0. Quit\n");
 
             int numero = teclado.nextInt();
 
@@ -25,7 +30,11 @@ public class App {
                 int lado = teclado.nextInt();
                 System.out.printf("Introduceme un caracter");
                 String caracter = teclado.next();
-                    Figures.writeSquare(lado, caracter);
+                Figures.writeSquare(lado, caracter);
+            } else if (numero == 4) {
+                System.out.printf("Introduce la altura: ");
+                int altura = teclado.nextInt();
+                Figures.writeInvertedPyramid(altura);
             } else if (numero == 0) {
                 Console.close();
             }
