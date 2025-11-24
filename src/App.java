@@ -7,7 +7,7 @@ public class App {
         Scanner teclado = new Scanner(System.in);
 
         for (; true; ) {
-            System.out.println("Choose an option:\n" + "  1. Square\n" + "  2. Title\n" + "  0. Quit\n");
+            System.out.println("Choose an option:\n" + "  1. Square\n" + "  2. Title\n" + "  3. Cuadrado Personalizado\n" + "  0. Quit\n");
 
             int numero = teclado.nextInt();
 
@@ -20,6 +20,12 @@ public class App {
                 String titulo = teclado.nextLine();
                 titulo = teclado.nextLine();
                 Titles.writeTitle(titulo);
+            }else if (numero == 3) {
+                System.out.printf("Lado del cuadrado: ");
+                int lado = teclado.nextInt();
+                System.out.printf("Introduceme un caracter");
+                String caracter = teclado.next();
+                    Figures.writeSquare(lado, caracter);
             } else if (numero == 0) {
                 Console.close();
             }
