@@ -47,7 +47,9 @@ public class App {
                 int altura = teclado.nextInt();
                 System.out.println("Introduceme la base");
                 int base = teclado.nextInt();
-                Figures.writeRectangle(base, altura);
+                System.out.println("Introduceme un caracter");
+                String caracter = teclado.next();
+                Figures.writeRectangle(base, altura,caracter);
             }else if (numero == 0) {
                 Console.close();
             }
