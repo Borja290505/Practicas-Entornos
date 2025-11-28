@@ -14,6 +14,7 @@ public class App {
                     "  4. Piramide Invertida\n" +
                     "  5. Mostrar simbolo apertura\n" +
                     "  6. Mostrar simbolo cerrar\n" +
+                    "  7. Rectangulo\n" +
                     "  0. Quit\n");
 
             int numero = teclado.nextInt();
@@ -41,6 +42,12 @@ public class App {
                 writeHeader();
             }else if (numero == 6) {
                 writeHeader();
+            }else if (numero == 7) {
+                System.out.println("Introduceme la altura");
+                int altura = teclado.nextInt();
+                System.out.println("Introduceme la base");
+                int base = teclado.nextInt();
+                Figures.writeRectangle(base, altura);
             }else if (numero == 0) {
                 Console.close();
             }

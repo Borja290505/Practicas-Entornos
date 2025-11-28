@@ -49,4 +49,15 @@ public class Figures {
 
     }
 
+
+    public static void writeRectangle(int base, int altura) {
+        for (int i = 0; i < altura; i++) {
+            for (int j = 0; j < base; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+
 }
