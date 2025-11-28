@@ -12,7 +12,8 @@ public class App {
                     "  2. Title\n" +
                     "  3. Cuadrado Personalizado\n" +
                     "  4. Piramide Invertida\n" +
-                    "  5. Mostrar simbolo\n" +
+                    "  5. Mostrar simbolo apertura\n" +
+                    "  6. Mostrar simbolo cerrar\n" +
                     "  0. Quit\n");
 
             int numero = teclado.nextInt();
@@ -38,6 +39,8 @@ public class App {
                 Figures.writeInvertedPyramid(altura);
             } else if (numero == 5) {
                 writeHeader();
+            }else if (numero == 6) {
+                writeHeader();
             }else if (numero == 0) {
                 Console.close();
             }
@@ -47,6 +50,13 @@ public class App {
     public static void writeHeader(){
         for(int i = 0; i<80;i++){
             System.out.print("<");
+        }
+        System.out.println("");
+    }
+
+    public static void writeTrailer(){
+        for(int i = 0; i<80;i++){
+            System.out.print(">");
         }
         System.out.println("");
 
